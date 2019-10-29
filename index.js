@@ -1,8 +1,3 @@
-// Create database
+import producdb from "./js/Module";
 
-const db = new Dexie("myDb");
-db.version(1).stores({
-  friends: `name,age`
-});
-
-db.open();
+producdb();
