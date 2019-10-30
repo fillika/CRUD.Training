@@ -111,7 +111,11 @@ const createEl = (tagname, appendTo, fn) => {
 
 function table() {
   const tbody = document.getElementById("tbody");
-  tbody.textContent = "";
+
+  //Для очистки содержимого таблицы (чтобы не было дублирования)
+  while (tbody.hasChildNodes()) {
+    tbody.removeChild(tbody.firstChild);
+  }
 
   getData(db.products, data => {
     if (data) {
