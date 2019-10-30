@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c320eb-fd77-41d5-8bdd-ca6e65f6b950" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/Module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/node_modules/prettier" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -42,7 +42,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\a.mironenko\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\User\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -70,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572367079036</updated>
       <workItem from="1572367080197" duration="3442000" />
+      <workItem from="1572411179586" duration="671000" />
     </task>
     <servers />
   </component>
@@ -78,5 +82,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="768" y="300" key="FileChooserDialogImpl" timestamp="1572411762864">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="768" y="300" key="FileChooserDialogImpl/0.0.1920.1034@0.0.1920.1034" timestamp="1572411762864" />
+    <state x="982" y="162" key="SettingsEditor" timestamp="1572411765658">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="982" y="162" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1572411765658" />
   </component>
 </project>
