@@ -44,6 +44,14 @@ btnCreate.addEventListener("click", () => {
   getData(db.products, data => {
     userId.value = data.id + 1 || 1;
   });
+
+  table();
+
+  const insertMsg = document.querySelector(".insert-msg");
+  insertMsg.classList.add("open-msg");
+  setTimeout(() => {
+    insertMsg.classList.remove("open-msg");
+  }, 2000);
 });
 
 //create event on btn read button
@@ -60,8 +68,14 @@ btnUpdate.addEventListener("click", () => {
         price: price.value
       })
       .then(updated => {
-        let get = updated ? `data updated` : `Couldn't update data`;
-        console.log(get);
+        let get = updated ? `Data was updated` : `Couldn't update data`;
+
+        const insertMsg = document.querySelector(".update-msg");
+        insertMsg.innerHTML = get;
+        insertMsg.classList.add("open-msg");
+        setTimeout(() => {
+          insertMsg.classList.remove("open-msg");
+        }, 2000);
       });
   }
 });
@@ -71,6 +85,13 @@ btnDelete.addEventListener("click", () => {
   db = producdb("Productdb", {
     products: `++id, name, seller, price`
   });
+
+  const insertMsg = document.querySelector(".deleted-msg");
+  insertMsg.classList.add("open-msg");
+  setTimeout(() => {
+    insertMsg.classList.remove("open-msg");
+  }, 2000);
+
   db.open();
   table();
 });

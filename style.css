@@ -31,3 +31,18 @@ table .btndelete {
 .not-found {
   color: gray;
 }
+
+/* message */
+
+.insert-msg,
+.deleted-msg,
+.update-msg {
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  transition: 0.5s ease;
+}
+
+.open-msg {
+  transform: translateY(0%);
+}
