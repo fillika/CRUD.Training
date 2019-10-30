@@ -60,6 +60,15 @@ btnUpdate.addEventListener("click", () => {
   }
 });
 
+btnDelete.addEventListener("click", () => {
+  db.delete();
+  db = producdb("Productdb", {
+    products: `++id, name, seller, price`
+  });
+  db.open();
+  table();
+});
+
 //insert function
 const bulkCreate = (dbtable, data) => {
   let flag = empty(data);
@@ -157,6 +166,10 @@ function table() {
         createEl("td", tr, td => {
           createEl("i", td, i => {
             i.className += "fas fa-trash-alt btndelete";
+
+            i.setAttribute("data-id", data.id);
+
+            i.addEventListener("click", deleteBtn);
           });
         });
       });
@@ -166,6 +179,7 @@ function table() {
 
 function editBtn(event) {
   let id = +event.target.dataset.id;
+
   db.products.get(id, data => {
     userId.value = data.id || 0;
     proname.value = data.name || "";
@@ -173,4 +187,11 @@ function editBtn(event) {
     price.value = data.price || "";
     console.log(data);
   });
+}
+
+function deleteBtn(event) {
+  let id = +event.target.dataset.id;
+
+  db.products.delete(id);
+  table();
 }
