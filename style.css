@@ -23,6 +23,11 @@ table .btndelete {
   text-align: center;
 }
 
-.table td, .table th {
+.table td,
+.table th {
   text-align: center;
+}
+
+.not-found {
+  color: gray;
 }

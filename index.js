@@ -19,6 +19,7 @@ const userId = document.getElementById("userid");
 const proname = document.getElementById("proname");
 const seller = document.getElementById("seller");
 const price = document.getElementById("price");
+const notFound = document.querySelector(".not-found");
 
 // buttons
 
@@ -26,6 +27,11 @@ const btnCreate = document.getElementById("btn-create");
 const btnRead = document.getElementById("btn-read");
 const btnUpdate = document.getElementById("btn-update");
 const btnDelete = document.getElementById("btn-delete");
+
+window.onload = () => {
+  textId(userId);
+  table();
+};
 
 btnCreate.addEventListener("click", () => {
   let flag = bulkCreate(db.products, {
@@ -173,6 +179,8 @@ function table() {
           });
         });
       });
+    } else {
+      notFound.textContent = "Not found records in database";
     }
   });
 }
@@ -194,4 +202,10 @@ function deleteBtn(event) {
 
   db.products.delete(id);
   table();
+}
+
+function textId(textBoxId) {
+  getData(db.products, data => {
+    textBoxId.value = data.id + 1 || 1;
+  });
 }
