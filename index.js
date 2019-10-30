@@ -43,6 +43,23 @@ btnCreate.addEventListener("click", () => {
 //create event on btn read button
 btnRead.addEventListener("click", table);
 
+btnUpdate.addEventListener("click", () => {
+  const id = parseInt(userId.value || 0);
+
+  if (id) {
+    db.products
+      .update(id, {
+        name: proname.value,
+        seller: seller.value,
+        price: price.value
+      })
+      .then(updated => {
+        let get = updated ? `data updated` : `Couldn't update data`;
+        console.log(get);
+      });
+  }
+});
+
 //insert function
 const bulkCreate = (dbtable, data) => {
   let flag = empty(data);
