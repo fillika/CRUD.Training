@@ -22,3 +22,7 @@ table .btndelete {
   cursor: pointer;
   text-align: center;
 }
+
+.table td, .table th {
+  text-align: center;
+}

@@ -130,6 +130,10 @@ function table() {
         createEl("td", tr, td => {
           createEl("i", td, i => {
             i.className += "fas fa-edit btnedit";
+
+            i.setAttribute("data-id", data.id);
+
+            i.addEventListener("click", editBtn);
           });
         });
 
@@ -140,5 +144,16 @@ function table() {
         });
       });
     }
+  });
+}
+
+function editBtn(event) {
+  let id = +event.target.dataset.id;
+  db.products.get(id, data => {
+    userId.value = data.id || 0;
+    proname.value = data.name || "";
+    seller.value = data.seller || "";
+    price.value = data.price || "";
+    console.log(data);
   });
 }
